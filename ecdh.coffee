@@ -24,7 +24,7 @@
 #         where v = v1 + v2 + ... + vn
 #
 #     The coalition of attackers need never disclose their private key to 
-#     the others.
+#     the others, providing a sort of threshold decryption scheme.
 #
 # http://paper.ijcsns.org/07_book/201006/20100623.pdf
 sjcl = require './sjcl.js'
