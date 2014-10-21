@@ -18,13 +18,6 @@
 #     then take the private key, derive the shared secret key, and do as he
 #     pleases.
 #
-# Notes:  This backdoor lends itself to key splitting.  Each of i parties 
-#     generates a random vi and calculates V as
-#         V = v1G + v2G + ... + vnG
-#         where v = v1 + v2 + ... + vn
-#
-#     The coalition of attackers need never disclose their private key to 
-#     the others, providing a sort of threshold decryption scheme.
 #
 # http://paper.ijcsns.org/07_book/201006/20100623.pdf
 sjcl = require './sjcl.js'
