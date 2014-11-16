@@ -33,10 +33,10 @@ sjcl.ecc.curves.c256.backdoor.masterKey = new sjcl.ecc.point(sjcl.ecc.curves.c25
 
 # Constants:  Change for extra effect.  a, b, h, e = sjcl.bn.random(curve.r)
 sjcl.ecc.curves.c256.backdoor.const =
-    a: new sjcl.bn.prime.p256('0x955fe12816bf0265cc9c7287995e9655346ed8fa3c82410151dc7d8c33862e98')
-    b: new sjcl.bn.prime.p256('0x2ed1d9be1b6808a5c4dde8b6a0913cfac6854a4492fd693ad1ec780ef1f83e54')
-    h: new sjcl.bn.prime.p256('0x595092ed1b1268090c8ccd4954bc5941472cdd7a37a1e7c705dd0c3d6e547e3a')
-    e: new sjcl.bn.prime.p256('0x789d6450bd4e2afa90eee0ef817aca3729b73a6008f36c680bbd2fc01ff5882c')
+    a: new sjcl.bn('0x955fe12816bf0265cc9c7287995e9655346ed8fa3c82410151dc7d8c33862e98')
+    b: new sjcl.bn('0x2ed1d9be1b6808a5c4dde8b6a0913cfac6854a4492fd693ad1ec780ef1f83e54')
+    h: new sjcl.bn('0x595092ed1b1268090c8ccd4954bc5941472cdd7a37a1e7c705dd0c3d6e547e3a')
+    e: new sjcl.bn('0x789d6450bd4e2afa90eee0ef817aca3729b73a6008f36c680bbd2fc01ff5882c')
 
 
 sjcl.ecc.elGamal.generateKeys = (curve) ->
