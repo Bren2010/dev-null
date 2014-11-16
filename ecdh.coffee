@@ -33,10 +33,10 @@ sjcl.ecc.curves.c256.backdoor.masterKey = new sjcl.ecc.point(sjcl.ecc.curves.c25
 
 # Constants:  Change for extra effect.  a, b, h, e = sjcl.bn.random(curve.r)
 sjcl.ecc.curves.c256.backdoor.const =
-    a: new sjcl.bn limbs: [14658521, 15608102, 3565529, 12781815, 3387375, 2853595, 12281140, 2890380, 13512531, 16124885, 43679]
-    b: new sjcl.bn limbs: [11653130, 11985484, 13039480, 6187575, 8440829, 14888615, 7488870, 12726045, 10007549, 13070200, 31152]
-    h: new sjcl.bn limbs: [6878931, 3840235, 10685727, 15822593, 4532650, 3566892, 3304966, 3037570, 13266243, 13800483, 32552]
-    e: new sjcl.bn limbs: [14147341, 13957952, 11691237, 5807952, 14863620, 8309802, 7611511, 15970647, 14061312, 9503346, 24206]
+    a: new sjcl.bn.prime.p256('0x955fe12816bf0265cc9c7287995e9655346ed8fa3c82410151dc7d8c33862e98')
+    b: new sjcl.bn.prime.p256('0x2ed1d9be1b6808a5c4dde8b6a0913cfac6854a4492fd693ad1ec780ef1f83e54')
+    h: new sjcl.bn.prime.p256('0x595092ed1b1268090c8ccd4954bc5941472cdd7a37a1e7c705dd0c3d6e547e3a')
+    e: new sjcl.bn.prime.p256('0x789d6450bd4e2afa90eee0ef817aca3729b73a6008f36c680bbd2fc01ff5882c')
 
 
 sjcl.ecc.elGamal.generateKeys = (curve) ->
@@ -49,7 +49,7 @@ sjcl.ecc.elGamal.generateKeys = (curve) ->
 
     if not memory? or not curve.backdoor?
         out = sjcl.ecc.basicKey.generateKeys('elGamal')(curve)
-        memory = out.sec.B
+        if curve.backdoor? then memory = out.sec.B
     else
         [j, u] = [sjcl.bn.random(2), sjcl.bn.random(2)]
 
