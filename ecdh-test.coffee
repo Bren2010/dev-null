@@ -13,7 +13,7 @@ console.log ''
 
 
 
-masterSec = new sjcl.bn("0x72238d8506a769b46a077bd7884297038c41d742262f008cebeb2d056064c11a")
+masterSec = new sjcl.bn.prime.p256("0x72238d8506a769b46a077bd7884297038c41d742262f008cebeb2d056064c11a")
 masterSecKey = new sjcl.ecc.elGamal.secretKey sjcl.ecc.curves.c256, masterSec
 
 x = backdoor.Algorithm3(sjcl.ecc.curves.c256, masterSecKey, key1.pub, key2.pub)
