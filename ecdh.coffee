@@ -27,9 +27,9 @@ sjcl.ecc.curves.c256.backdoor = hash: sjcl.hash.sha256.hash
 
 # Master Key:  This should be changed to the attacker's public key.
 sjcl.ecc.curves.c256.backdoor.masterKey = new sjcl.ecc.point(sjcl.ecc.curves.c256,
-        new sjcl.bn.prime.p256('0x509405dc59cd109f4f3dc4d215f13662b0752248875ddab63b13a0582f9a10ae'),
-        new sjcl.bn.prime.p256('0xab4593592953cad81ee1c3cf15f3104daa3f46977014763c57a70d61c8461dd5')
-        )
+    new sjcl.bn.prime.p256('0x509405dc59cd109f4f3dc4d215f13662b0752248875ddab63b13a0582f9a10ae'),
+    new sjcl.bn.prime.p256('0xab4593592953cad81ee1c3cf15f3104daa3f46977014763c57a70d61c8461dd5')
+)
 
 # Constants:  Change for extra effect.  a, b, h, e = sjcl.bn.random(curve.r)
 sjcl.ecc.curves.c256.backdoor.const =
